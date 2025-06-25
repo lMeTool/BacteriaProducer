@@ -20,9 +20,8 @@ class MushroomsCollector:
     def __str__(self):
         self.info = ', '.join(self.mushrooms)
         return self.info
-
     # Напишите магический метод __str__,
-    # возвращающий перечень грибов из списка mushrooms 
+    # возвращающий перечень грибов из списка mushrooms
     # через запятую.
 
 
