@@ -1,17 +1,26 @@
 class MushroomsCollector:
     # Проверьте, нет ли здесь ошибки:
-    mushrooms = []
+    def __init__(self):
+        self.mushrooms = []
 
     # Исправьте ошибку в этом методе.
     def is_poisonous(self, mushroom_name):
-        if mushroom_name == 'Мухомор' or 'Поганка':
+        if mushroom_name == 'Мухомор' or mushroom_name == 'Поганка':
             return True
-        return False
-
+        else:
+            return False
     # Допишите метод.
-    def add_mushroom(self, ...):
-        ...
-    
+
+    def add_mushroom(self, mushroom_name):
+        if not self.is_poisonous(mushroom_name):
+            self.mushrooms.append(mushroom_name)
+        else:
+            print('Нельзя добавить ядовитый гриб')
+
+    def __str__(self):
+        self.info = ', '.join(self.mushrooms)
+        return self.info
+
     # Напишите магический метод __str__,
     # возвращающий перечень грибов из списка mushrooms 
     # через запятую.
